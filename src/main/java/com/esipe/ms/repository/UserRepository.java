@@ -24,8 +24,8 @@ public class UserRepository {
     public User getOne(String email){
         return users.get(email);
     }
-        public List<User> getAll(){
-        return (List<User>) users.values();
+        public HashMap<String, User> getAll(){
+        return (HashMap<String, User>) users;
     }
     public void delete(String email){
         if(!ifExists(email)){

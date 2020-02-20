@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Handler;
 
 @Service
 public class UserService {
@@ -22,7 +24,7 @@ public class UserService {
         System.out.println("get user by email : " + email);
         return userRepository.getOne(email);
     }
-    public List<User> getAll(){
+    public HashMap<String, User> getAll(){
         return userRepository.getAll();
     }
     public void update(User user){
